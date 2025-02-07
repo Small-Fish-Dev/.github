@@ -1,0 +1,43 @@
+name: Create Bug 🐞
+description: Prepare a bug for triage
+title: "🐞 "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a bug. It'll be added to the [project](https://github.com/orgs/Small-Fish-Dev/projects/10) for triage.
+  - type: textarea
+    id: what-happens
+    attributes:
+      label: What's the bug?
+      placeholder: What does the bug cause?
+    validations:
+      required: true
+  - type: textarea
+    id: fix-ideas
+    attributes:
+      label: Any ideas about how we could fix it?
+      placeholder: How could we fix it?
+  - type: checkboxes
+    id: task-org-section-type
+    attributes:
+      label: Who does this bug relate to?
+      description: Who would have the best chance of tackling this bug?
+      options:
+        - label: Artists and UI Designers
+        - label: Programmers
+        - label: Musicians
+        - label: Writers and Game Designers
+  - type: checkboxes
+    id: org-team-type
+    attributes:
+      label: Known bug causes
+      description: Is the bug caused by any of these common issues?
+      options:
+        - label: Engine issues or s&box issues
+        - label: Outdated code
+        - label: Outdated assets
+        - label: Broken assets
+        - label: Broken or updated external service

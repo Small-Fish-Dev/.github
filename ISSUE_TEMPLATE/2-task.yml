@@ -1,0 +1,26 @@
+name: Create Task or Feature 💡
+description: Prepare a task for triage
+title: "💡 "
+labels: ["task", "triage"]
+projects: ["Small-Fish-Dev/10"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Add a task. It'll be added to the [project](https://github.com/orgs/Small-Fish-Dev/projects/10) for triage.
+  - type: textarea
+    id: what-to-add
+    attributes:
+      label: What would you like to add?
+    validations:
+      required: true
+  - type: checkboxes
+    id: org-team-type
+    attributes:
+      label: Who does this task relate to?
+      description: Who would have the best chance of implementing this?
+      options:
+        - label: Artists and UI Designers
+        - label: Programmers
+        - label: Musicians
+        - label: Writers and Game Designers

@@ -1,0 +1,26 @@
+name: Create Blank Issue 📄
+description: If you can't use the templates, create a blank issue here
+title: "📄 "
+labels: ["triage"]
+projects: ["Small-Fish-Dev/10"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If the other issue templates don't work for you, you can use this. Please let Gio know if you think a new template should be added.
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: What do you have to say?
+    validations:
+      required: true
+  - type: checkboxes
+    id: org-team-type
+    attributes:
+      label: Who does this issue relate to?
+      description: If this issue should be handled by a specific team select it below
+      options:
+        - label: Artists and UI Designers
+        - label: Programmers
+        - label: Musicians
+        - label: Writers and Game Designers
