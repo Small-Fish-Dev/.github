@@ -20,7 +20,8 @@ body:
       label: Who does this issue relate to?
       description: If this issue should be handled by a specific team select it below
       options:
-        - label: Artists and UI Designers
+        - label: 2D Artists and UI Designers
+        - label: 3D Artists and Animators
         - label: Programmers
         - label: Musicians
         - label: Writers and Game Designers

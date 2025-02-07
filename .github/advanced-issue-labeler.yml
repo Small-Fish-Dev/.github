@@ -1,0 +1,14 @@
+policy:
+  - section:
+      - id: [org-team-type]
+        label:
+          - name: "team: 2D Art and UI"
+            keys: ["2D Artists", "UI Artists"]
+          - name: "team: 3D Art"
+            keys: ["3D Artists", "Animators"]
+          - name: "team: Developers"
+            keys: ["Programmers"]
+          - name: "team: Music"
+            keys: ["Musicians"]
+          - name: "team: Writers"
+            keys: ["Writers and Game Designers"]

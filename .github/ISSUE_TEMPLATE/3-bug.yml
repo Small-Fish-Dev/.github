@@ -21,17 +21,20 @@ body:
       label: Any ideas about how we could fix it?
       placeholder: How could we fix it?
   - type: checkboxes
-    id: task-org-section-type
+    id: org-team-type
     attributes:
       label: Who does this bug relate to?
-      description: Who would have the best chance of tackling this bug?
+      description: Who would have the best chance of tackling this bug? Feel free to select multiple.
       options:
-        - label: Artists and UI Designers
+        - label: 2D Artists
+        - label: UI Artists
+        - label: 3D Artists
+        - label: Animators
         - label: Programmers
         - label: Musicians
         - label: Writers and Game Designers
   - type: checkboxes
-    id: org-team-type
+    id: bug-causes
     attributes:
       label: Known bug causes
       description: Is the bug caused by any of these common issues?
