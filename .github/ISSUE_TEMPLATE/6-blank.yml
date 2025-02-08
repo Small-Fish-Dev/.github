@@ -1,7 +1,6 @@
 name: Create Blank Issue 📄
 description: If you can't use the templates, create a blank issue here
 title: "📄 "
-labels: ["triage"]
 projects: ["Small-Fish-Dev/10"]
 body:
   - type: markdown
