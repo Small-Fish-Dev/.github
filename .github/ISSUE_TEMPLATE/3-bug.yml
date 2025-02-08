@@ -9,38 +9,14 @@ body:
       value: |
         Report a bug. It'll be added to the [project](https://github.com/orgs/Small-Fish-Dev/projects/10) for triage.
   - type: textarea
-    id: what-happens
+    id: bug-what-happens
     attributes:
       label: What's the bug?
       placeholder: What does the bug cause?
     validations:
       required: true
   - type: textarea
-    id: fix-ideas
+    id: bug-fix-ideas
     attributes:
-      label: Any ideas about how we could fix it?
-      placeholder: How could we fix it?
-  - type: checkboxes
-    id: org-team-type
-    attributes:
-      label: Who does this bug relate to?
-      description: Who would have the best chance of tackling this bug? Feel free to select multiple.
-      options:
-        - label: 2D Artists
-        - label: UI Artists
-        - label: 3D Artists
-        - label: Animators
-        - label: Programmers
-        - label: Musicians
-        - label: Writers and Game Designers
-  - type: checkboxes
-    id: bug-causes
-    attributes:
-      label: Known bug causes
-      description: Is the bug caused by any of these common issues?
-      options:
-        - label: Engine issues or s&box issues
-        - label: Outdated code
-        - label: Outdated assets
-        - label: Broken assets
-        - label: Broken or updated external service
+      label: Any ideas about possible fixes?
+      placeholder: Don't worry, this is optional. If you can't think of anything now and you learn something later, feel free to comment.

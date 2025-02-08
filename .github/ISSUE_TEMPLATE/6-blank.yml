@@ -13,14 +13,3 @@ body:
       label: What do you have to say?
     validations:
       required: true
-  - type: checkboxes
-    id: org-team-type
-    attributes:
-      label: Who does this issue relate to?
-      description: If this issue should be handled by a specific team select it below
-      options:
-        - label: 2D Artists and UI Designers
-        - label: 3D Artists and Animators
-        - label: Programmers
-        - label: Musicians
-        - label: Writers and Game Designers
