@@ -1,0 +1,36 @@
+name: Sync Labels
+
+on:
+  workflow_dispatch:
+
+jobs:
+  labels:
+    name: Sync labels
+    runs-on: ubuntu-22.04
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v3
+
+      - name: 🚀 Run Label Sync
+        uses: srealmoreno/label-sync-action@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          auto-discover-repos: true
+
+          # Optional:
+          account-type: org | user
+
+          # Optional:
+          owner: owner
+
+          # Optional:
+          exclude-forked-repos: true
+
+          # Optional:
+          exclude-archived-repos: true
+
+          # Optional:
+          exclude-private-repos: false
+
+          # Optional:
+          exclude-disabled-repos: true
