@@ -1,7 +1,7 @@
 name: Create Bug 🐞
 description: Prepare a bug for triage
 title: "🐞 "
-labels: ["bug"]
+labels: ["🪲 Bug"]
 projects: ["Small-Fish-Dev/10"]
 body:
   - type: markdown
