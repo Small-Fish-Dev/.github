@@ -1,7 +1,7 @@
 name: Create Task or Feature 💡
 description: Prepare a task for triage
 title: "💡 "
-labels: ["feature"]
+labels: ["💡 Feature"]
 projects: ["Small-Fish-Dev/10"]
 body:
   - type: markdown
