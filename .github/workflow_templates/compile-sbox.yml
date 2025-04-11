@@ -1,19 +1,14 @@
-name: Compile
+name: Compile s&box game
 
-#on:
-#  push:
-#    branches:
-#      - "**"
+on: push
 
-on:
-  repository_dispatch:
-    types: [trigger-build]
+env:
+  UPDATE_SCRIPT: "C:\\scripts\\update-sbox.bat"
+  ENGINE_PATH: "C:\\apps\\sbox"
 
 jobs:
   compile:
-    name: Compile
     runs-on: [self-hosted, windows]
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -21,7 +16,7 @@ jobs:
           submodules: 'recursive'
 
       - name: Update engine
-        run: "C:\\scripts\\update-sbox.bat"
+        run: $UPDATE_SCRIPT
 
       - name: Pull sbox-automator
         run: |
@@ -36,7 +31,7 @@ jobs:
       - name: Run sbox-automator
         run: >
           sbox-automator\sbox-automator\bin\Debug\net9.0\sbox-automator.exe 
-          --engine C:\apps\sbox 
+          --engine $ENGINE_PATH
           --project .
           --script sbox-automator\NothingPlugin.cs
         shell: cmd
