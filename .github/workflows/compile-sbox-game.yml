@@ -5,7 +5,9 @@ name: Compile
 #    branches:
 #      - "**"
 
-on: workflow_dispatch
+on:
+  repository_dispatch:
+    types: [trigger-build]
 
 jobs:
   compile:
