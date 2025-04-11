@@ -1,0 +1,38 @@
+name: Compile
+
+#on:
+#  push:
+#    branches:
+#      - "**"
+
+jobs:
+  compile:
+    name: Compile
+    runs-on: [self-hosted, windows]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+
+      - name: Update engine
+        run: "C:\\scripts\\update-sbox.bat"
+
+      - name: Pull sbox-automator
+        run: |
+          git clone https://github.com/gio3k/sbox-automator
+        shell: cmd
+
+      - name: Build sbox-automator
+        run: |
+          dotnet build sbox-automator\sbox-automator\sbox-automator.csproj
+        shell: cmd
+
+      - name: Run sbox-automator
+        run: >
+          sbox-automator\sbox-automator\bin\Debug\net9.0\sbox-automator.exe 
+          --engine C:\apps\sbox 
+          --project .
+          --script sbox-automator\NothingPlugin.cs
+        shell: cmd
