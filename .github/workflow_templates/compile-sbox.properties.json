@@ -1,0 +1,10 @@
+{
+    "name": "Compile s&box game",
+    "description": "Template for s&box game compiles",
+    "categories": [
+        "sbox"
+    ],
+    "filePatterns": [
+        "*.sbproj"
+    ]
+}
