@@ -1,0 +1,16 @@
+name: Create Mini Task or Feature 💡
+description: Prepare a task for triage, less text boxes, quicker
+title: "💡 "
+labels: ["💡 Feature"]
+projects: ["Small-Fish-Dev/10"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Add a task. It'll be added to the [project](https://github.com/orgs/Small-Fish-Dev/projects/10) for triage.
+  - type: textarea
+    id: task-what-to-add
+    attributes:
+      label: What would you like to add?
+    validations:
+      required: true
